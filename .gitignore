@@ -1,0 +1,17 @@
+# Python cache
+__pycache__/
+*.pyc
+
+# Virtual Environment
+.venv/
+
+# Streamlit Secrets
+.streamlit/secrets.toml
+
+# JSON Files
+chat_history.json
+history_data.json
+performance_data.json
+
+# VS Code
+.vscode/
