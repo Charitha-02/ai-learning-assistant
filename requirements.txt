@@ -12,3 +12,4 @@ streamlit-mic-recorder
 pydub
 openai-whisper
 streamlit-calendar
+scikit-learn
