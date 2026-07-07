@@ -685,15 +685,13 @@ margin-top:20px;
 🎤 Interactive Learning
 </h2>
 """, unsafe_allow_html=True)
-        col1 = st.columns(1)
-        with col1:
-            if st.button(
-        "🎤 Mock Interview",
-        key="mock_btn",
-        use_container_width=True
-            ):
-                st.session_state["page"] = "🎤 Mock Interview"
-                st.rerun()
+        if st.button(
+    "🎤 Mock Interview",
+    key="mock_btn",
+    use_container_width=True
+        ):
+            st.session_state["page"] = "🎤 Mock Interview"
+            st.rerun()
         
 
         
