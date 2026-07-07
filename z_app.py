@@ -1,4 +1,4 @@
-from streamlit_mic_recorder import mic_recorder
+#from streamlit_mic_recorder import mic_recorder
 from pydub import AudioSegment
 import speech_recognition as sr
 import tempfile
@@ -685,21 +685,8 @@ margin-top:20px;
 🎤 Interactive Learning
 </h2>
 """, unsafe_allow_html=True)
-        st.info(
-    "Practice with Voice Assistant and Interactive AI Mock Interviews."
-)
-        col1, col2 = st.columns(2)
-
+        col1 = st.columns(1)
         with col1:
-            if st.button(
-        "🎤 Voice Assistant",
-        key="voice_btn",
-        use_container_width=True
-            ):
-                st.session_state["page"] = "🎤 Voice Assistant"
-                st.rerun()
-
-        with col2:
             if st.button(
         "🎤 Mock Interview",
         key="mock_btn",
@@ -2548,80 +2535,7 @@ elif option == "💼 Placement Prep":
             result = get_ai_response(prompt)
 
             st.markdown(result)
-elif option == "🎤 Voice Assistant":
 
-    st.header("🎤 AI Voice Assistant")
-
-    st.write(
-        "Speak through your microphone and the AI will convert your speech to text and answer your question."
-    )
-
-    audio = mic_recorder(
-        start_prompt="🎤 Start Recording",
-        stop_prompt="⏹ Stop Recording",
-        key="voice_recorder"
-    )
-
-    if audio:
-        from voice_to_text import speech_to_text
-        
-
-        st.success(
-            "🎉 Voice Recorded Successfully!"
-        )
-
-
-        try:
-
-            st.write(
-                "Processing voice..."
-            )
-
-            text = speech_to_text(
-                audio["bytes"]
-            )
-
-            st.write(
-                "Extracted Text:"
-            )
-
-            st.write(
-                text
-            )
-
-            st.subheader(
-                "📝 Speech To Text"
-            )
-
-            st.info(
-                text
-            )
-
-            if text.strip() != "":
-
-                response = get_ai_response(
-                    text
-                )
-
-                st.subheader(
-                    "🤖 AI Response"
-                )
-
-                st.success(
-                    response
-                )
-
-            else:
-
-                st.warning(
-                    "⚠ No speech detected. Please speak louder and try again."
-                )
-
-        except Exception as e:
-
-            st.error(
-                f"Error: {str(e)}"
-            )
 elif option == "🎤 Mock Interview":
 
     st.header("🎤 Interactive AI Interviewer")
