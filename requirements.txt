@@ -9,3 +9,4 @@ opencv-python-headless
 torch
 torchvision
 streamlit-mic-recorder
+pydub
