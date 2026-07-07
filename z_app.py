@@ -5,8 +5,6 @@ import tempfile
 
 from g_coding_practice import generate_coding_question
 
-from voice_to_text import speech_to_text
-
 import streamlit as st
 from streamlit_calendar import calendar
 from datetime import datetime
@@ -2565,6 +2563,7 @@ elif option == "🎤 Voice Assistant":
     )
 
     if audio:
+        from voice_to_text import speech_to_text
         
 
         st.success(
