@@ -10,3 +10,4 @@ torch
 torchvision
 streamlit-mic-recorder
 pydub
+openai-whisper
